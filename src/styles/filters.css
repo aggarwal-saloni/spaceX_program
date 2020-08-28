@@ -1,0 +1,45 @@
+.filtersTab-main{
+    background-color: #ffffff;
+    padding: 6px 6px 8% 6px;
+    border-radius: 4px;
+    width: 100%;
+}
+.filtersTitleMain{
+    font-size: 15pt;
+}
+.filtersTitle {
+    font-size: 11pt;
+    text-align: center;
+}
+.filtersLaunchButtons{
+    margin-top: 4%;
+    display: grid;
+    grid-gap: 1.5% 30%;
+    grid-template-columns: 30% 30%;
+}
+.filterButton-year{
+    width: 100%;
+    text-align: center;
+}
+.filterLaunchTitle{
+    margin-top: 14%;
+}
+.filtersButton-main{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5%;
+    margin-top: 2%;
+}
+.filtersButton-true{
+    padding: 1.5% 9%;
+    background-color: #c5e09b;
+    margin: 2% 14% 4% 14%;
+    font-size: 12pt;
+    font-weight: 500;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.filterButton-active {
+    background-color: #84bf11;
+}
