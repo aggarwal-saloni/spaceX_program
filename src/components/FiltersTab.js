@@ -19,7 +19,7 @@ class FiltersTab extends Component {
     this.setState({
       launchYear: el
     })
-    let filter = `&launch_year=${el}`
+    let filter = this.getFilterValue(1) + `&launch_year=${el}`
     this.props.onClickFilter(filter)
   }
 
@@ -27,7 +27,7 @@ class FiltersTab extends Component {
     this.setState({
       launchFlag: value
     })
-    let filter = `&launch_success=${value}`
+    let filter = this.getFilterValue(2) + `&launch_success=${value}`
     this.props.onClickFilter(filter)
   }
 
@@ -35,8 +35,29 @@ class FiltersTab extends Component {
     this.setState({
       landingFlag: value
     })
-    let filter = `&land_success=${value}`
+    let filter = this.getFilterValue(3) + `&land_success=${value}`
     this.props.onClickFilter(filter)
+  }
+  getFilterValue = (filterNo) => {
+    let filterValue = ''
+    const year = this.state.launchYear !== '' ? `&launch_year=${this.state.launchYear}` : ''
+    const launchValue = this.state.launchFlag !== undefined ? `&launch_success=${this.state.launchFlag}` : ''
+    const landValue = this.state.landingFlag !== undefined ? `&land_success=${this.state.landingFlag}` : ''
+
+    switch (filterNo) {
+      case 1:
+        filterValue = `${launchValue}${landValue}`
+        break;
+      case 2:
+        filterValue = `${year}${landValue}`
+        break;
+      case 3:
+        filterValue = `${launchValue}${year}`
+        break;
+      default:
+        filterValue = ''
+    }
+    return filterValue
   }
   render() {
     return (
