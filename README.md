@@ -16,4 +16,4 @@ SpaceX Launch Programs is an application which would help users list and browse 
 To run this project, install npm locally
 * npm start - To start the project
 * npm test - To run test cases
-* npm build - To build the project
+* npm react-scripts build - To build the project
